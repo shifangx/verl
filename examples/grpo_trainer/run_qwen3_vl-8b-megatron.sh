@@ -86,5 +86,9 @@ python3 -m verl.trainer.main_ppo --config-path=config \
     global_profiler.tool=nsys \
     global_profiler.steps=[1,2,3] \
     global_profiler.save_path=${WORKSPACE}/../logs/nsys_qwen3_vl_8b_megatron \
+    actor_rollout_ref.actor.profiler.enable=True \
+    actor_rollout_ref.actor.profiler.all_ranks=True \
+    actor_rollout_ref.rollout.profiler.enable=True \
+    actor_rollout_ref.rollout.profiler.all_ranks=True \
     $@
     
